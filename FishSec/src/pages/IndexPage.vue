@@ -7,14 +7,13 @@
       </div>
       <div>
         <q-btn color="primary" label="Отправить" @click="onSendClick"/>
-
-        <div class="q-pa-md" style="max-width: 300px">
+        <div class="q-pa-md" style="min-width: 900px">
         <q-input
         v-model="res"
         filled
-        type="textarea"
-    />
-  </div>
+        type="textarea" 
+        />
+        </div>
       </div>
     </div>
     </q-card>
@@ -63,7 +62,6 @@ export default defineComponent({
             'x-apikey': apikey
           }
         };
-
         try {
               var resp = await axios.request(options2)
               resp = resp.data.data.attributes
